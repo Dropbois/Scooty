@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bjhlsrjuyhpra"]
 
+[ext_resource type="Script" uid="uid://dqwhd3jkn6ho2" path="res://quit_button.gd" id="1_06t4h"]
+
 [node name="main_menu" type="Node2D" unique_id=112484820]
 
 [node name="Control" type="Control" parent="." unique_id=1052478178]
@@ -37,3 +39,4 @@ offset_bottom = 61.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
+script = ExtResource("1_06t4h")

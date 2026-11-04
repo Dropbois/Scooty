@@ -20,6 +20,13 @@ var jump_mult = 1.0
 
 var a = 1.0
 
+@onready var Sprite = $Sprite2D
+@onready var BulletCollider = $BulletCollider
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	BulletCollider.modulate.a = 0.0
+
 func _physics_process(delta: float) -> void:
 	
 	if is_on_floor() or Input.is_action_just_released("up"):
@@ -54,14 +61,18 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("shift"):
 		#a nice smooth transition to 0.2 opacity (MAKE CODE GOODER????)
 		a = lerp(a, 0.2, 0.2)
-		modulate.a = snapped(a, 0.05)
+		Sprite.modulate.a = snapped(a, 0.05)
+		
+		BulletCollider.modulate.a = 1.0
 		
 		speed_mult = shift_speed_mult
 		jump_mult = shift_jump_mult
 	else:
 		#the above script but reversed
 		a = lerp(a, 1.0, 0.2)
-		modulate.a = snapped(a, 0.05)
+		Sprite.modulate.a = snapped(a, 0.05)
+		
+		BulletCollider.modulate.a = 0.0
 		
 		speed_mult = 1.0
 		jump_mult = 1.0
