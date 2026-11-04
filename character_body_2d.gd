@@ -86,5 +86,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	#print(velocity)
+	
+	if direction == 1.0:
+		Sprite.scale.x = 1.0
+	elif direction == -1.0: 
+		Sprite.scale.x = -1.0
 
 	move_and_slide()
