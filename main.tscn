@@ -1,10 +1,7 @@
 [gd_scene format=4 uid="uid://6q2rv6nbwel4"]
 
-[ext_resource type="Texture2D" uid="uid://bpicw164qoubu" path="res://icon.svg" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dy82j7ensqg1i" path="res://tilesets/tileset0.png" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://be8o5chx6neqr" path="res://player.tscn" id="2_h2yge"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwgh4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
 texture = ExtResource("2_1bvp3")
@@ -24,18 +21,6 @@ sources/1 = SubResource("TileSetAtlasSource_lquwl")
 [node name="Game" type="Node2D" unique_id=935881359]
 
 [node name="Level" type="Node2D" parent="." unique_id=769484593]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Level" unique_id=1913657660]
-position = Vector2(216, 643)
-scale = Vector2(27.354195, 2.5217278)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Level/StaticBody2D" unique_id=1159269146]
-scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("1_0xm2m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1089078699]
-shape = SubResource("RectangleShape2D_fwgh4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Level" unique_id=1996016768]
 scale = Vector2(2, 2)
