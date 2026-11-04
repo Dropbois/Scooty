@@ -5,10 +5,10 @@
 [node name="Control" type="Control" parent="." unique_id=1052478178]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 649.0
+offset_right = 640.0
+offset_bottom = 480.0
 
-[node name="Button" type="Button" parent="Control" unique_id=591982885]
+[node name="play_button" type="Button" parent="Control" unique_id=591982885]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Play"
 
-[node name="Button2" type="Button" parent="Control" unique_id=1895435007]
+[node name="quit_button" type="Button" parent="Control" unique_id=1895435007]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
